@@ -1,5 +1,6 @@
 h1 {text-align: center;
-    color: white;
+    color: deeppink;
+    font-size: 50px;
     padding-top: 20px}
 td {
     height: auto;
@@ -122,4 +123,4 @@ td {
   .atom_order {
     font-size: 9px;
   }
-  }
+}
