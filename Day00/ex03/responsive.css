@@ -76,6 +76,7 @@ td {
   .atom_order {
     font-size: 15px;
   }
+}
    @media (max-height: 1248px) {
     .atom {
       height: 108px;
