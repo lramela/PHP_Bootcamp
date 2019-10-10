@@ -1,14 +1,25 @@
 #!/usr/bin/php
 <?php
- function oddeven($number)
- {
-   $number = trim ($number);
-
-    if($number % 2 == 0)
-        echo "The number $number is even";
-    else
-         echo "The number $number is odd";
- }
-  echo "Enter a number";
-  $input = oddeven(fgets(STDIN));
+    while (1)
+    {
+        echo "Enter a number: ";
+        $fd = fopen('php://stdin', 'r');
+        $input = fgets($fd);
+        $trimed_input = rtrim($input, "\n");
+        if (is_numeric($trimed_input))
+        {
+            if ($trimed_input % 2 == 0)
+                echo "The number $trimed_input is even\n";
+            else
+                echo "The number $trimed_input is odd\n";
+        }
+        else if (feof($fd))
+        {
+            fclose($fd);
+            exit;
+        }
+        else
+            echo "'$trimed_input'"."is not a number\n";
+        fclose($fd);
+    }
 ?>
